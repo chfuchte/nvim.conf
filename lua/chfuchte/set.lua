@@ -29,3 +29,6 @@ vim.g.mapleader = " "
 
 vim.api.nvim_exec("language en_US", true)
 
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
