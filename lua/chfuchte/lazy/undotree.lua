@@ -1,6 +1,7 @@
 return {
   "mbbill/undotree",
-  keys = {
+    event = { "BufReadPre", "BufNewFile" },
+    keys = {
     {
       "<leader>u",
       vim.cmd.UndotreeToggle,

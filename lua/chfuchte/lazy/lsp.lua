@@ -27,54 +27,12 @@ return {
             ensure_installed = {
                 "lua_ls",                -- Lua
                 "rust_analyzer",         -- Rust
-                "tailwindcss",           -- Tailwind
-                "tsserver",      -- TypeScript, JavaScript, JSX, TSX, Vue (TS)
-                "volar",                 -- Vue (vuels and/or volar),
-                -- "vuels",
-                "emmet_language_server", -- Emmet (HTML)
-                "cssls",                 -- CSS
             },
             handlers = {
                 function(server_name) -- default handler (optional)
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
                     }
-                end,
-
-                ["tsserver"] = function()
-                    require("lspconfig").tsserver.setup({
-                        filetypes = {
-                            "javascript", 
-                            "javascriptreact",
-                            "javascript.jsx", 
-                            "typescript", 
-                            "typescriptreact", 
-                            "typescript.tsx", 
-                            "vue",
-                        },
-                        init_options = {
-                            plugins = {
-                                 {
-                                    name = "@vue/typescript-plugin",
-                                    location = "C:\\Users\\Sabine\\AppData\\Roaming\\npm\\node_modules\\@vue\\typescript-plugin",
-                                    languages = {"javascript", "typescript", "vue"},
-                                },
-                            },
-                        },
-                        capabilities = capabilities,
-                    })
-                end,
-
-                ["volar"] = function ()
-                    require("lspconfig").volar.setup({
-                        capabilities = capabilities,
-                        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-                        init_options = {
-                            vue = {
-                                 hybridMode = false,
-                             },
-                        },
-                    })
                 end,
 
                 ["lua_ls"] = function()
