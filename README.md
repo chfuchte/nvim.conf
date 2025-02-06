@@ -1,4 +1,4 @@
-# My Neovim configuration
+# My Neovim configuration for my old Win10 machine
 
-I use [lazy.nvim](github.com/folke/lazy.nvim) as my package manager and are currently using nvim on Windows10 (which isn't that fun, so I'm still considering VSCode and JetBrains for most projects)
+I used [lazy.nvim](github.com/folke/lazy.nvim) as my package manager.
 
